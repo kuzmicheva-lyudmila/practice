@@ -1,0 +1,471 @@
+> Task :DateRangeBenchmarkTest.main()
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest
+# Parameters: (count = 10)
+
+# Run progress: 0.00% complete, ETA 00:33:20
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 3018.865 ns/op
+# Warmup Iteration   2: 2189.384 ns/op
+# Warmup Iteration   3: 2125.918 ns/op
+# Warmup Iteration   4: 2088.732 ns/op
+# Warmup Iteration   5: 2091.610 ns/op
+Iteration   1: 2088.442 ns/op
+Iteration   2: 2122.282 ns/op
+Iteration   3: 2104.442 ns/op
+Iteration   4: 2096.737 ns/op
+Iteration   5: 2094.589 ns/op
+
+# Run progress: 5.00% complete, ETA 00:31:59
+# Fork: 1 of 1
+# Warmup Iteration   1: 2374.107 ns/op
+# Warmup Iteration   2: 2181.251 ns/op
+# Warmup Iteration   3: 2265.052 ns/op
+# Warmup Iteration   4: 2647.226 ns/op
+# Warmup Iteration   5: 2685.973 ns/op
+Iteration   1: 2578.035 ns/op
+Iteration   2: 2953.198 ns/op
+Iteration   3: 2981.310 ns/op
+Iteration   4: 3317.947 ns/op
+Iteration   5: 2754.541 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest":
+  2917.006 �(99.9%) 1067.634 ns/op [Average]
+  (min, avg, max) = (2578.035, 2917.006, 3317.947), stdev = 277.261
+  CI (99.9%): [1849.373, 3984.640] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest
+# Parameters: (count = 30)
+
+# Run progress: 10.00% complete, ETA 00:30:17
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 7620.158 ns/op
+# Warmup Iteration   2: 7229.078 ns/op
+# Warmup Iteration   3: 6153.075 ns/op
+# Warmup Iteration   4: 7273.014 ns/op
+# Warmup Iteration   5: 7960.336 ns/op
+Iteration   1: 6148.275 ns/op
+Iteration   2: 6062.257 ns/op
+Iteration   3: 6732.265 ns/op
+Iteration   4: 6083.695 ns/op
+Iteration   5: 6124.415 ns/op
+
+# Run progress: 15.00% complete, ETA 00:28:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 6919.010 ns/op
+# Warmup Iteration   2: 6525.131 ns/op
+# Warmup Iteration   3: 6295.764 ns/op
+# Warmup Iteration   4: 6572.565 ns/op
+# Warmup Iteration   5: 6255.267 ns/op
+Iteration   1: 6270.279 ns/op
+Iteration   2: 6244.328 ns/op
+Iteration   3: 6247.726 ns/op
+Iteration   4: 6280.396 ns/op
+Iteration   5: 6221.361 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest":
+  6252.818 �(99.9%) 89.336 ns/op [Average]
+  (min, avg, max) = (6221.361, 6252.818, 6280.396), stdev = 23.200
+  CI (99.9%): [6163.482, 6342.153] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest
+# Parameters: (count = 100)
+
+# Run progress: 20.00% complete, ETA 00:26:55
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 21428.568 ns/op
+# Warmup Iteration   2: 20815.294 ns/op
+# Warmup Iteration   3: 20466.386 ns/op
+# Warmup Iteration   4: 20571.780 ns/op
+# Warmup Iteration   5: 20452.842 ns/op
+Iteration   1: 21225.210 ns/op
+Iteration   2: 21092.954 ns/op
+Iteration   3: 20672.940 ns/op
+Iteration   4: 20571.269 ns/op
+Iteration   5: 25337.901 ns/op
+
+# Run progress: 25.00% complete, ETA 00:25:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 23920.987 ns/op
+# Warmup Iteration   2: 20402.300 ns/op
+# Warmup Iteration   3: 20282.652 ns/op
+# Warmup Iteration   4: 20422.331 ns/op
+# Warmup Iteration   5: 20381.886 ns/op
+Iteration   1: 20726.912 ns/op
+Iteration   2: 20392.140 ns/op
+Iteration   3: 20344.308 ns/op
+Iteration   4: 21785.063 ns/op
+Iteration   5: 21285.302 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest":
+  20906.745 �(99.9%) 2380.122 ns/op [Average]
+  (min, avg, max) = (20344.308, 20906.745, 21785.063), stdev = 618.110
+  CI (99.9%): [18526.623, 23286.867] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest
+# Parameters: (count = 5000)
+
+# Run progress: 30.00% complete, ETA 00:23:33
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 1067265.007 ns/op
+# Warmup Iteration   2: 1015318.054 ns/op
+# Warmup Iteration   3: 997573.081 ns/op
+# Warmup Iteration   4: 993101.658 ns/op
+# Warmup Iteration   5: 993092.450 ns/op
+Iteration   1: 998604.528 ns/op
+Iteration   2: 997932.769 ns/op
+Iteration   3: 998246.008 ns/op
+Iteration   4: 992235.843 ns/op
+Iteration   5: 1001652.416 ns/op
+
+# Run progress: 35.00% complete, ETA 00:21:52
+# Fork: 1 of 1
+# Warmup Iteration   1: 1049470.693 ns/op
+# Warmup Iteration   2: 997128.181 ns/op
+# Warmup Iteration   3: 1001228.357 ns/op
+# Warmup Iteration   4: 1003654.293 ns/op
+# Warmup Iteration   5: 997560.388 ns/op
+Iteration   1: 1050953.449 ns/op
+Iteration   2: 993530.082 ns/op
+Iteration   3: 1005403.517 ns/op
+Iteration   4: 999837.084 ns/op
+Iteration   5: 999755.346 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest":
+  1009895.896 �(99.9%) 89847.877 ns/op [Average]
+  (min, avg, max) = (993530.082, 1009895.896, 1050953.449), stdev = 23333.208
+  CI (99.9%): [920048.019, 1099743.772] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest
+# Parameters: (count = 9000)
+
+# Run progress: 40.00% complete, ETA 00:20:10
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 2279986.384 ns/op
+# Warmup Iteration   2: 2182252.833 ns/op
+# Warmup Iteration   3: 2004536.661 ns/op
+# Warmup Iteration   4: 1817941.801 ns/op
+# Warmup Iteration   5: 1834275.715 ns/op
+Iteration   1: 1825032.853 ns/op
+Iteration   2: 1819213.631 ns/op
+Iteration   3: 1815390.321 ns/op
+Iteration   4: 1829806.964 ns/op
+Iteration   5: 1817996.097 ns/op
+
+# Run progress: 45.00% complete, ETA 00:18:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 1924202.843 ns/op
+# Warmup Iteration   2: 1822857.827 ns/op
+# Warmup Iteration   3: 1815054.949 ns/op
+# Warmup Iteration   4: 1825776.488 ns/op
+# Warmup Iteration   5: 1760693.312 ns/op
+Iteration   1: 1755631.236 ns/op
+Iteration   2: 1779290.135 ns/op
+Iteration   3: 1779608.230 ns/op
+Iteration   4: 1758736.517 ns/op
+Iteration   5: 1775205.997 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest":
+  1769694.423 �(99.9%) 44681.892 ns/op [Average]
+  (min, avg, max) = (1755631.236, 1769694.423, 1779608.230), stdev = 11603.746
+  CI (99.9%): [1725012.530, 1814376.315] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest
+# Parameters: (count = 10)
+
+# Run progress: 50.00% complete, ETA 00:16:48
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 2735.693 ns/op
+# Warmup Iteration   2: 2835.396 ns/op
+# Warmup Iteration   3: 2772.237 ns/op
+# Warmup Iteration   4: 2629.188 ns/op
+# Warmup Iteration   5: 2635.173 ns/op
+Iteration   1: 2604.324 ns/op
+Iteration   2: 2617.779 ns/op
+Iteration   3: 2615.556 ns/op
+Iteration   4: 2610.778 ns/op
+Iteration   5: 2599.542 ns/op
+
+# Run progress: 55.00% complete, ETA 00:15:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 2499.336 ns/op
+# Warmup Iteration   2: 2578.544 ns/op
+# Warmup Iteration   3: 2923.352 ns/op
+# Warmup Iteration   4: 2410.142 ns/op
+# Warmup Iteration   5: 2413.841 ns/op
+Iteration   1: 2389.423 ns/op
+Iteration   2: 2387.311 ns/op
+Iteration   3: 2387.361 ns/op
+Iteration   4: 2390.704 ns/op
+Iteration   5: 2384.729 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest":
+  2387.906 �(99.9%) 8.797 ns/op [Average]
+  (min, avg, max) = (2384.729, 2387.906, 2390.704), stdev = 2.285
+  CI (99.9%): [2379.108, 2396.703] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest
+# Parameters: (count = 30)
+
+# Run progress: 60.00% complete, ETA 00:13:26
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 6838.476 ns/op
+# Warmup Iteration   2: 7202.257 ns/op
+# Warmup Iteration   3: 6473.963 ns/op
+# Warmup Iteration   4: 6442.863 ns/op
+# Warmup Iteration   5: 6454.768 ns/op
+Iteration   1: 6423.295 ns/op
+Iteration   2: 6465.282 ns/op
+Iteration   3: 6448.031 ns/op
+Iteration   4: 6479.724 ns/op
+Iteration   5: 6434.333 ns/op
+
+# Run progress: 65.00% complete, ETA 00:11:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 6532.758 ns/op
+# Warmup Iteration   2: 6296.722 ns/op
+# Warmup Iteration   3: 6310.488 ns/op
+# Warmup Iteration   4: 6463.128 ns/op
+# Warmup Iteration   5: 6246.473 ns/op
+Iteration   1: 6286.820 ns/op
+Iteration   2: 6262.465 ns/op
+Iteration   3: 6255.842 ns/op
+Iteration   4: 6312.532 ns/op
+Iteration   5: 6270.237 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest":
+  6277.579 �(99.9%) 87.426 ns/op [Average]
+  (min, avg, max) = (6255.842, 6277.579, 6312.532), stdev = 22.704
+  CI (99.9%): [6190.153, 6365.005] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest
+# Parameters: (count = 100)
+
+# Run progress: 70.00% complete, ETA 00:10:05
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 20738.511 ns/op
+# Warmup Iteration   2: 19719.095 ns/op
+# Warmup Iteration   3: 20543.123 ns/op
+# Warmup Iteration   4: 24617.807 ns/op
+# Warmup Iteration   5: 21067.878 ns/op
+Iteration   1: 19688.447 ns/op
+Iteration   2: 19742.465 ns/op
+Iteration   3: 19762.128 ns/op
+Iteration   4: 19685.292 ns/op
+Iteration   5: 20737.786 ns/op
+
+# Run progress: 75.00% complete, ETA 00:08:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 20783.938 ns/op
+# Warmup Iteration   2: 19768.365 ns/op
+# Warmup Iteration   3: 19745.010 ns/op
+# Warmup Iteration   4: 19763.387 ns/op
+# Warmup Iteration   5: 19845.395 ns/op
+Iteration   1: 19628.166 ns/op
+Iteration   2: 19935.927 ns/op
+Iteration   3: 19781.598 ns/op
+Iteration   4: 19923.037 ns/op
+Iteration   5: 19676.517 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest":
+  19789.049 �(99.9%) 538.155 ns/op [Average]
+  (min, avg, max) = (19628.166, 19789.049, 19935.927), stdev = 139.757
+  CI (99.9%): [19250.894, 20327.204] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest
+# Parameters: (count = 5000)
+
+# Run progress: 80.00% complete, ETA 00:06:43
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 1085565.368 ns/op
+# Warmup Iteration   2: 1049798.008 ns/op
+# Warmup Iteration   3: 1045691.737 ns/op
+# Warmup Iteration   4: 1045786.410 ns/op
+# Warmup Iteration   5: 1037263.133 ns/op
+Iteration   1: 1038920.193 ns/op
+Iteration   2: 1031720.853 ns/op
+Iteration   3: 1009712.719 ns/op
+Iteration   4: 1024545.651 ns/op
+Iteration   5: 1008067.507 ns/op
+
+# Run progress: 85.00% complete, ETA 00:05:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 1083181.095 ns/op
+# Warmup Iteration   2: 1027866.786 ns/op
+# Warmup Iteration   3: 1028333.826 ns/op
+# Warmup Iteration   4: 1031267.608 ns/op
+# Warmup Iteration   5: 1263080.605 ns/op
+Iteration   1: 1140783.917 ns/op
+Iteration   2: 1025370.099 ns/op
+Iteration   3: 1024526.281 ns/op
+Iteration   4: 1028275.077 ns/op
+Iteration   5: 1024598.597 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest":
+  1048710.794 �(99.9%) 198281.572 ns/op [Average]
+  (min, avg, max) = (1024526.281, 1048710.794, 1140783.917), stdev = 51493.095
+  CI (99.9%): [850429.222, 1246992.366] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 1.8.0_281, Java HotSpot(TM) 64-Bit Server VM, 25.281-b09
+# VM invoker: C:\Program Files\Java\jdk1.8.0_281\jre\bin\java.exe
+# VM options: -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest
+# Parameters: (count = 9000)
+
+# Run progress: 90.00% complete, ETA 00:03:21
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 1961625.706 ns/op
+# Warmup Iteration   2: 1896605.283 ns/op
+# Warmup Iteration   3: 1888898.773 ns/op
+# Warmup Iteration   4: 1883395.746 ns/op
+# Warmup Iteration   5: 1882842.596 ns/op
+Iteration   1: 1885953.742 ns/op
+Iteration   2: 1889253.551 ns/op
+Iteration   3: 1875072.657 ns/op
+Iteration   4: 1891252.532 ns/op
+Iteration   5: 1880264.288 ns/op
+
+# Run progress: 95.00% complete, ETA 00:01:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 1960888.234 ns/op
+# Warmup Iteration   2: 1979462.713 ns/op
+# Warmup Iteration   3: 1936606.134 ns/op
+# Warmup Iteration   4: 1887577.183 ns/op
+# Warmup Iteration   5: 1883443.965 ns/op
+Iteration   1: 1887797.906 ns/op
+Iteration   2: 1888517.801 ns/op
+Iteration   3: 1888127.137 ns/op
+Iteration   4: 1891567.020 ns/op
+Iteration   5: 1889496.848 ns/op
+
+
+Result "ru.kl.DateRangeBenchmarkTest.showDataForDateRangeByStreamTest":
+  1889101.342 �(99.9%) 5847.571 ns/op [Average]
+  (min, avg, max) = (1887797.906, 1889101.342, 1891567.020), stdev = 1518.596
+  CI (99.9%): [1883253.772, 1894948.913] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:33:36
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                  (count)  Mode  Cnt        Score        Error  Units
+DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest       10  avgt    5     2917.006 �   1067.634  ns/op
+DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest       30  avgt    5     6252.818 �     89.336  ns/op
+DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest      100  avgt    5    20906.745 �   2380.122  ns/op
+DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest     5000  avgt    5  1009895.896 �  89847.877  ns/op
+DateRangeBenchmarkTest.showDataForDateRangeByIteratorTest     9000  avgt    5  1769694.423 �  44681.892  ns/op
+DateRangeBenchmarkTest.showDataForDateRangeByStreamTest         10  avgt    5     2387.906 �      8.797  ns/op
+DateRangeBenchmarkTest.showDataForDateRangeByStreamTest         30  avgt    5     6277.579 �     87.426  ns/op
+DateRangeBenchmarkTest.showDataForDateRangeByStreamTest        100  avgt    5    19789.049 �    538.155  ns/op
+DateRangeBenchmarkTest.showDataForDateRangeByStreamTest       5000  avgt    5  1048710.794 � 198281.572  ns/op
+DateRangeBenchmarkTest.showDataForDateRangeByStreamTest       9000  avgt    5  1889101.342 �   5847.571  ns/op
+
