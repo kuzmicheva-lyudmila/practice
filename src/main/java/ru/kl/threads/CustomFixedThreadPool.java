@@ -79,10 +79,10 @@ public class CustomFixedThreadPool {
         }
 
         boolean result = true;
-        final ReentrantLock lock = this.mainLock;
+        ReentrantLock lock = this.mainLock;
         lock.lock();
         try {
-            for (Worker worker: workers) {
+            for (Worker worker : workers) {
                 Thread thread = worker.thread;
                 if (Objects.nonNull(worker.thread) && thread.getState() != Thread.State.TERMINATED) {
                     result = false;
@@ -117,7 +117,7 @@ public class CustomFixedThreadPool {
             worker = new Worker();
             Thread t = worker.thread;
             if (Objects.nonNull(t)) {
-                final ReentrantLock lock = this.mainLock;
+                ReentrantLock lock = this.mainLock;
                 lock.lock();
                 try {
                     if (activeThreadCount.get() < threadCapacity && !workQueue.isEmpty()) {
@@ -174,10 +174,6 @@ public class CustomFixedThreadPool {
     }
 
     private Runnable getTask() {
-        if (workQueue.isEmpty()) {
-            return null;
-        }
-
         try {
             return workQueue.poll(THREAD_KEEP_ALIVE_TIME_MS, TimeUnit.MILLISECONDS);
         } catch (InterruptedException retry) {
@@ -187,7 +183,7 @@ public class CustomFixedThreadPool {
 
     private boolean removeWorker(Worker worker, boolean isFailed) {
         boolean result = false;
-        final ReentrantLock lock = this.mainLock;
+        ReentrantLock lock = this.mainLock;
         lock.lock();
         try {
             if ((activeThreadCount.get() > MIN_ACTIVE_THREADS || isFailed) && Objects.nonNull(worker)) {
@@ -221,7 +217,7 @@ public class CustomFixedThreadPool {
     }
 
     private void interruptWorkers() {
-        final ReentrantLock lock = this.mainLock;
+        ReentrantLock lock = this.mainLock;
         lock.lock();
         try {
             for (Worker w : workers)

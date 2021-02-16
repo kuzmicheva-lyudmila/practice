@@ -15,13 +15,16 @@ public class WaitExample {
         log.info(Thread.currentThread().getName() + " after waiting...");
     }
 
-    public void testWait() {
+    public void testWait() throws InterruptedException {
         Runnable runnable = this::callWait;
         Thread firstThread = new Thread(runnable);
         Thread secondThread = new Thread(runnable);
 
         firstThread.start();
         secondThread.start();
+
+        firstThread.join();
+        secondThread.join();
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -33,6 +36,5 @@ public class WaitExample {
         }
 
         new WaitExample().testWait();
-        Thread.sleep(3000);
     }
 }
