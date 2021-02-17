@@ -12,6 +12,8 @@ public class DefaultAccountService implements AccountService {
 
     private static final int LOCK_ATTEMPTS = 3;
     private static final long MAX_LOCK_TIMEOUT_MS = 1000;
+    public static final String LOCKED_FIRST_ACCOUNT = "Locked first account: {}";
+    public static final String LOCKED_SECOND_ACCOUNT = "Locked second account: {}";
 
     private final ConcurrentHashMap<Long, Account> accounts;
     private final ReentrantLock firstAccountLock;
@@ -30,10 +32,10 @@ public class DefaultAccountService implements AccountService {
         Account secondAccount = getAccount(secondPersonId);
 
         synchronized(firstAccount) {
-            log.info("Locked first account: {}", firstPersonId);
+            log.info(LOCKED_FIRST_ACCOUNT, firstPersonId);
             checkTransaction();
             synchronized(secondAccount) {
-                log.info("Locked second account: {}", secondPersonId);
+                log.info(LOCKED_SECOND_ACCOUNT, secondPersonId);
                 executeTransaction(firstAccount, secondAccount, amount);
             }
         }
@@ -41,7 +43,7 @@ public class DefaultAccountService implements AccountService {
     }
 
     @Override
-    public boolean makeTransactionWithoutDeadLock(long firstPersonId, long secondPersonId, long amount) {
+    public boolean makeTransactionWithoutDeadLockFirstMethod(long firstPersonId, long secondPersonId, long amount) {
         Account firstAccount = getAccount(firstPersonId);
         Account secondAccount = getAccount(secondPersonId);
 
@@ -51,10 +53,10 @@ public class DefaultAccountService implements AccountService {
             count++;
             try {
                 if (firstAccountLock.tryLock(generateTimeout(), TimeUnit.MILLISECONDS)) {
-                    log.info("Locked first account: {}", firstPersonId);
+                    log.info(LOCKED_FIRST_ACCOUNT, firstPersonId);
                     checkTransaction();
                     if (secondAccountLosk.tryLock(generateTimeout(), TimeUnit.MILLISECONDS)) {
-                        log.info("Locked second account: {}", secondPersonId);
+                        log.info(LOCKED_SECOND_ACCOUNT, secondPersonId);
                         executeTransaction(firstAccount, secondAccount, amount);
 
                         log.info("Success transaction with attempts: {}", count);
@@ -71,6 +73,31 @@ public class DefaultAccountService implements AccountService {
         }
 
         return isSuccessfulTransaction;
+    }
+
+    public void makeTransactionWithoutDeadLockSecondMethod(long firstPersonId, long secondPersonId, long amount) {
+        Account firstAccount;
+        Account secondAccount;
+        long amountForTransaction = amount;
+
+        if (firstPersonId > secondPersonId) {
+            firstAccount = getAccount(secondPersonId);
+            secondAccount = getAccount(firstPersonId);
+            amountForTransaction *= -1;
+        } else {
+            firstAccount = getAccount(firstPersonId);
+            secondAccount = getAccount(secondPersonId);
+        }
+
+        synchronized(firstAccount) {
+            log.info(LOCKED_FIRST_ACCOUNT, firstPersonId);
+            checkTransaction();
+            synchronized(secondAccount) {
+                log.info(LOCKED_SECOND_ACCOUNT, secondPersonId);
+                executeTransaction(firstAccount, secondAccount, amountForTransaction);
+            }
+        }
+        log.info("Success transaction");
     }
 
     @Override

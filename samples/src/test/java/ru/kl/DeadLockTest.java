@@ -13,7 +13,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.awaitility.Awaitility.await;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -67,9 +66,9 @@ class DeadLockTest {
     }
 
     @Test
-    void withoutDeadLockTest() throws ExecutionException, InterruptedException {
+    void withoutDeadLockTestWithLock() throws ExecutionException, InterruptedException {
         Boolean firstAttempt = executorService.submit(
-                    () -> accountService.makeTransactionWithoutDeadLock(
+                    () -> accountService.makeTransactionWithoutDeadLockFirstMethod(
                             FIRST_PERSON_ID,
                             SECOND_PERSON_ID,
                             FIRST_TRANSACTION_AMOUNT
@@ -77,7 +76,7 @@ class DeadLockTest {
                 )
                 .get();
         Boolean secondAttempt = executorService.submit(
-                    () -> accountService.makeTransactionWithoutDeadLock(
+                    () -> accountService.makeTransactionWithoutDeadLockFirstMethod(
                             SECOND_PERSON_ID,
                             FIRST_PERSON_ID,
                             SECOND_TRANSACTION_AMOUNT
@@ -86,5 +85,31 @@ class DeadLockTest {
 
         await().until(() -> firstAttempt);
         await().until(() -> secondAttempt);
+    }
+
+    @Test
+    void withoutDeadLockTestWithSynchronized() throws InterruptedException {
+        executorService.submit(
+                () -> accountService.makeTransactionWithoutDeadLockSecondMethod(
+                        FIRST_PERSON_ID,
+                        SECOND_PERSON_ID,
+                        FIRST_TRANSACTION_AMOUNT
+                )
+        );
+        executorService.submit(
+                () -> accountService.makeTransactionWithoutDeadLockSecondMethod(
+                        SECOND_PERSON_ID,
+                        FIRST_PERSON_ID,
+                        SECOND_TRANSACTION_AMOUNT
+                )
+        );
+
+        Thread.sleep(3000);
+        assertTrue(
+                ACCOUNT_BALANCE - FIRST_TRANSACTION_AMOUNT + SECOND_TRANSACTION_AMOUNT
+                        == accountService.getBalance(FIRST_PERSON_ID)
+                && ACCOUNT_BALANCE + FIRST_TRANSACTION_AMOUNT - SECOND_TRANSACTION_AMOUNT
+                        == accountService.getBalance(SECOND_PERSON_ID)
+        );
     }
 }
